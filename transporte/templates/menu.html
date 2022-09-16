@@ -1,0 +1,28 @@
+{% extends './base.html' %}
+
+{% block title %}
+Menú
+{%  endblock %}
+
+{% block body %}
+<div class="container p-3">
+    <h2>Estás en el menú dinámico</h2>
+    <h5>Nombre:  {{ account['des_nombre'] }} {{ account['des_apepat'] }} {{ account['des_apemat'] }}</h5>
+    <h5>Rol: {{ account['des_rol'] }}</h5>
+
+    <h5>
+        Opciones: 
+        <!-- {% if account2 %} -->
+        {% for row in account2 %}
+
+        <br>* {{ row['des_opcion']  }}
+    
+
+        {% endfor %}
+        <!-- {% endif %} -->
+    </h5>
+    <br><br>
+    <a href="{{ url_for('logout') }}" style="text-decoration: none">Cerrar sesión</a>
+</div>
+
+{% endblock %}

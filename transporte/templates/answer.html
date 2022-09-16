@@ -1,0 +1,67 @@
+{% extends './base.html' %}
+
+{% block title %}
+Answer
+{%  endblock %}
+
+{% block body %}
+
+<section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-5">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-12">
+                <div class="card-body p-md-5 mx-md-2">
+  
+                  <div class="text-center">
+                    <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bus-logo.svg/1024px-Bus-logo.svg.png"
+                      style="width: 185px;" alt="logo"> -->
+                    <h4 class="mt-1 mb-5 pb-1">RESPONDE LAS PREGUNTAS</h4>
+                  </div>
+  
+                  <form class="form-group" action="{{ url_for('answer') }}" method="post">
+                    <!-- <form class="form-group"> -->
+
+                    <div class="form-outline mb-4">
+                        <input type="text" name="cuenta" id="" placeholder="Digite su cuenta" required class="form-control" />
+                    </div> 
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example22">*{{ account['id_pregunta'] }} {{ account['des_pregunta'] }}</label>
+                        <input type="text" name="rspPregunta1" id="" placeholder="Digite su respuesta" required class="form-control" />
+                    </div>
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form2Example22">*{{ account2['id_pregunta'] }} {{ account2['des_pregunta'] }}</label>
+                      <input type="text" name="rspPregunta2" id="" placeholder="Digite su respuesta" required class="form-control" />
+                    </div>            
+
+                    <div class="text-center pt-1 mb-5 pb-1">
+                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" id="btnAceptar" type="submit" value="btnAceptar">Guardar</button>
+                      <!-- <a class="text-muted" href="#!">Forgot password?</a> -->
+                    </div>
+
+                    <a href="{{ url_for('logout') }}" style="text-decoration: none">Salir</a>
+                  </form>
+
+                </div>
+              </div>
+              <!-- <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4 class="mb-4">Empresa de transporte</h4>
+                  <p class="small mb-0">La empresa Aquarius fue creada a inicios de 2021 con la idea de ofrecer exclusivamente el servicio de alquiler de buses y micros las 12 horas del día, los 7 días de la semana, nuestro servicio está diseñado para que nuestros clientes cuenten con una respuesta segura gracias a la tecnología satelital que permite, que desde la central de comunicaciones se pueda ubicar el bus, contamos con una flota moderna de vehículos  y adicionalmente cuenta con la documentación que exige la Municipalidad de Lima y el MTC para operar en Lima cumpliendo con las normativas para nuestros clientes.
+                </p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+{% endblock %}
+
+

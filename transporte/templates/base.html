@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bus-logo.svg/1024px-Bus-logo.svg.png">
+    <!-- <link rel="icon" href="../icono.ico" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {%  endblock %}</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <!-- <div class="container py-3"> -->
+        {% block body %}
+
+        {% endblock %} 
+    <!-- </div> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- JavaScript -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+
+
+
+
+
+</body>
+</html>
+
+
+
+<script>
+    $(document).ready(function() {
+      $('#btnLogin').click(function() {
+        window.location.href = "login";
+      });
+    });
+  
+</script>
+
+<!-- {% for flashmsg in messages %}
+<script>
+    alertify.success('{{flashmsg}}')
+</script>
+
+{% endfor%} -->
+<script>
+//     $(document).ready(function() {
+//       $('#btnLogin').click(function() {
+  
+//         usuario = $('#txtUsuario').val();
+//         contraseña = $('#txtContraseña').val();
+
+//     if(usuario==""){
+//         alertify.error("Digite un usuario");
+//     }else if(contraseña==""){
+//         alertify.error("Digite una contraseña");
+//     }else{
+//         if(usuario=="admin"){
+//             if(usuario=="admin" && contraseña=="admin"){
+//                 alertify.success("Bienvenido :)");
+//                 setTimeout(function(){
+//                 window.location.href = "menu";
+//                 },2000)
+//             }else{
+//                 alertify.error("Contraseña incorrecta :c");
+//             }
+
+//         }else{
+//             alertify.error("El usuario no existe");
+//         }
+//     }
+
+
+//         // alertify.success(contraseña);
+//       });
+//   });
+  
+  </script>
